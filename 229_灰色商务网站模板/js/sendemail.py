@@ -1,48 +1,35 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
+from email.mime.text import MIMEText
+from subprocess import Popen, PIPE
 
-# import smtplib
-# from email.mime.text import MIMEText
-# from email.header import Header
-#
-# # 第三方 SMTP 服务
-# mail_host = "george.com"  # 设置服务器
-# mail_user = "XXXX"  # 用户名
-# mail_pass = "XXXXXX"  # 口令
-#
-# sender = 'from@runoob.com'
-# receivers = ['675896588@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
-#
-# message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
-# message['From'] = Header("菜鸟教程", 'utf-8')
-# message['To'] = Header("测试", 'utf-8')
-#
-# subject = 'Python SMTP 邮件测试'
-# message['Subject'] = Header(subject, 'utf-8')
-#
-# try:
-#     smtpObj = smtplib.SMTP()
-#     smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号
-#     # smtpObj.login(mail_user, mail_pass)
-#     smtpObj.sendmail(sender, receivers, message.as_string())
-#     print("邮件发送成功")
-# except smtplib.SMTPException:
-#     print("Error: 无法发送邮件")
 
-from PIL import Image, ImageFilter
+def send_mail(sender, recevier, subject, html_content):
+    msg = MIMEText(html_content, 'html', 'utf-8')
+    msg["From"] = sender
+    msg["To"] = recevier
+    msg["Subject"] = subject
+    p = Popen(["/usr/sbin/sendmail", "-t"], stdin=PIPE)
+    p.communicate(msg.as_string())
 
-img = Image.open(r"C:\Users\W9000210.ADC\Downloads\229_灰色商务网站模板\images\logo2.png")
 
-for i in range(4411):
-    for j in range(2136):
-        try:
-            r, g, b, alpha = img.getpixel((i, j))
-            if r == 58 and g == 58 and b == 58:
-                r = 200
-                g = 200
-                b = 200
-                img.putpixel((i, j), (r, g, b, alpha))
-        except Exception as e:
-            continue
-img.save('logo2.png')
+sender = 'robot@mimvp.com'
+recevier = '674896488@qq.com'
+subject = 'sendmail-subject'
+html_content = 'hello mimvp.com'
+send_mail(sender, recevier, subject, html_content)
 
+# from PIL import Image
+#
+# img = Image.open(r"C:\Users\W9000210.ADC\Downloads\229_灰色商务网站模板\images\logo2.png")
+#
+# for i in range(4411):
+#     for j in range(2136):
+#         try:
+#             r, g, b, alpha = img.getpixel((i, j))
+#             if r == 58 and g == 58 and b == 58:
+#                 r = 200
+#                 g = 200
+#                 b = 200
+#                 img.putpixel((i, j), (r, g, b, alpha))
+#         except Exception as e:
+#             continue
+# img.save('logo2.png')
