@@ -1,0 +1,90 @@
+date/time         : 2019-10-31, 14:19:55, 315ms
+computer name     : PW9000210
+user name         : W9000210 <admin>
+registered owner  : 13293359750
+operating system  : Windows NT New x64 build 9200
+system language   : Chinese (Simplified)
+system up time    : 8 days 4 hours
+program up time   : 2 seconds
+processors        : 8x Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
+physical memory   : 9969/16272 MB (free/total)
+free disk space   : (C:) 37.07 GB
+display mode      : 1920x1080, 32 bit
+process id        : $523c
+allocated memory  : 33.76 MB
+command line      : C:\Users\W9000210.ADC\Downloads\sendmail/sendmail -t -oi
+executable        : sendmail.exe
+exec. date/time   : 2011-06-18 01:10
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $297aecaf, $cd12e06c, $cd12e06c
+exception number  : 1
+exception class   : EIdConnClosedGracefully
+exception message : Connection Closed Gracefully.
+
+main thread ($5628):
+0043e503 +002f sendmail.exe IdIOHandler      1929  +23 TIdIOHandler.RaiseConnClosedGracefully
+00440d55 +0051 sendmail.exe IdIOHandlerStack  396  +17 TIdIOHandlerStack.CheckForDisconnect
+0043dada +01fe sendmail.exe IdIOHandler      1508  +60 TIdIOHandler.ReadFromSource
+0043d559 +0159 sendmail.exe IdIOHandler      1315  +57 TIdIOHandler.ReadLn
+0043d380 +0024 sendmail.exe IdIOHandler      1233   +1 TIdIOHandler.ReadLn
+0043d837 +0073 sendmail.exe IdIOHandler      1428  +10 TIdIOHandler.ReadLnWait
+0044035d +0059 sendmail.exe IdTCPConnection   768   +7 TIdTCPConnection.GetInternalResponse
+0043fea3 +0013 sendmail.exe IdTCPConnection   564   +1 TIdTCPConnection.GetResponse
+0043ff87 +005b sendmail.exe IdTCPConnection   585   +4 TIdTCPConnection.SendCmd
+004401f3 +003b sendmail.exe IdTCPConnection   721   +2 TIdTCPConnection.SendCmd
+004597f2 +007e sendmail.exe IdSMTPBase        226  +17 TIdSMTPBase.SendGreeting
+0045ab9f +003b sendmail.exe IdSMTP            376   +5 TIdSMTP.Connect
+004b5f14 +1060 sendmail.exe sendmail          808 +326 initialization
+74b18492 +0022 KERNEL32.DLL                            BaseThreadInitThunk
+
+thread $50dc:
+74b18492 +22 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $4c58:
+74b18492 +22 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $4158:
+74b18492 +22 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $828:
+76d96e4d +12d KERNELBASE.dll  WaitForMultipleObjectsEx
+76d96d03 +013 KERNELBASE.dll  WaitForMultipleObjects
+74b18492 +022 KERNEL32.DLL    BaseThreadInitThunk
+
+stack dump:
+0019fbb4  08 e5 43 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..C.............
+0019fbc4  c8 fb 19 00 08 e5 43 00 - 90 4f 72 03 01 00 00 00  ......C..Or.....
+0019fbd4  90 49 6f 03 94 34 46 00 - f4 fb 19 00 e4 fb 19 00  .Io..4F.........
+0019fbe4  0c fc 19 00 c8 4b 40 00 - f4 fb 19 00 00 00 00 00  .....K@.........
+0019fbf4  44 fc 19 00 5a 0d 44 00 - 00 00 00 00 94 34 46 00  D...Z.D......4F.
+0019fc04  94 34 46 00 dd da 43 00 - 50 fc 19 00 c8 4b 40 00  .4F...C.P....K@.
+0019fc14  44 fc 19 00 ff ff ff ff - 90 49 6f 03 00 00 00 00  D........Io.....
+0019fc24  00 00 00 00 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fc34  fe ff ff ff 00 00 00 01 - 90 49 6f 03 00 00 00 00  .........Io.....
+0019fc44  84 fc 19 00 5e d5 43 00 - 01 00 00 00 b4 fc 19 00  ....^.C.........
+0019fc54  c8 4b 40 00 84 fc 19 00 - 20 fd 19 00 c0 aa 73 03  .K@...........s.
+0019fc64  94 34 46 00 00 00 00 00 - b5 5d 2b 2a 00 00 00 00  .4F......]+*....
+0019fc74  ff ff ff ff 00 00 00 00 - 00 00 00 00 00 00 00 00  ................
+0019fc84  a8 fc 19 00 86 d3 43 00 - d4 fc 19 00 e0 aa 73 03  ......C.......s.
+0019fc94  c0 aa 73 03 00 40 00 00 - 90 49 6f 03 00 00 00 00  ..s..@...Io.....
+0019fca4  e0 aa 73 03 e8 fc 19 00 - 3c d8 43 00 d4 fc 19 00  ..s.....<.C.....
+0019fcb4  f8 fc 19 00 c8 4b 40 00 - e8 fc 19 00 94 34 46 00  .....K@......4F.
+0019fcc4  00 00 00 00 30 48 6f 03 - 00 00 00 00 00 00 00 00  ....0Ho.........
+0019fcd4  00 00 00 00 ff ff ff ff - 00 00 00 00 c0 aa 73 03  ..............s.
+0019fce4  ff ff ff 7f 24 fd 19 00 - 63 03 44 00 20 fd 19 00  ....$...c.D.....
+
+disassembling:
+[...]
+0043e4ef        call    -$36f9c ($407558)      ; System.LoadResString
+0043e4f4        mov     ecx, [ebp-4]
+0043e4f7        mov     dl, 1
+0043e4f9        mov     eax, [$41f6b4]
+0043e4fe        call    -$1eb07 ($41f9fc)      ; IdException.EIdException.Create
+0043e503      > call    -$3981c ($404cec)      ; System.@RaiseExcept
+0043e508 1930   xor     eax, eax
+0043e50a        pop     edx
+0043e50b        pop     ecx
+0043e50c        pop     ecx
+0043e50d        mov     fs:[eax], edx
+[...]
